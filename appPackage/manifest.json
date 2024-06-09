@@ -1,0 +1,77 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.1.14",
+    "id": "${{TEAMS_APP_ID}}",
+    "developer": {
+        "name": "George Chitechi",
+        "websiteUrl": "${{TAB_ENDPOINT}}",
+        "privacyUrl": "${{TAB_ENDPOINT}}/index.html#/privacy",
+        "termsOfUseUrl": "${{TAB_ENDPOINT}}/index.html#/termsofuse"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Flight Admin",
+        "full": "Flight Admin App"
+    },
+    "description": {
+        "short": "Fly high with ease: Manage flights effortlessly with the Flight Admin app",
+        "full": "Take off to seamless flight management: Navigate schedules, passengers, and operations with the streamlined efficiency of the Flight Admin app."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "defaultBlockUntilAdminAction": true,
+    "publisherDocsUrl": "${{TAB_ENDPOINT}}/index.html#/docs",
+    "isFullScreen": false,
+    "defaultInstallScope": "personal",
+    "composeExtensions": [],
+    "configurableTabs": [
+        {
+            "configurationUrl": "${{TAB_ENDPOINT}}/index.html#/config",
+            "canUpdateConfiguration": false,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "index0",
+            "name": "👤 User",
+            "contentUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
+            "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/tab",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "index1",
+            "name": "✈️ Flights",
+            "contentUrl": "${{TAB_ENDPOINT}}/index.html#/flights",
+            "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/flights",
+            "scopes": [
+                "personal"
+            ]
+        },
+
+        {
+            "entityId": "index2",
+            "name": "⚙️ Config",
+            "contentUrl": "${{TAB_ENDPOINT}}/index.html#/privacy",
+            "websiteUrl": "${{TAB_ENDPOINT}}/index.html#/privacy",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "${{TAB_DOMAIN}}"
+    ]
+}
